@@ -1,0 +1,227 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body 
+{
+    background-color: chartreuse;
+}
+main
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0.5rem 0.5rem rgba(22, 170, 54, 0.8);
+    border-radius: 2rem;
+    padding: 0 1rem;
+    width: 40vw;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.statistics
+{
+    font-size: 1rem;
+    background-color: white;
+}
+.card-container img  
+{
+    max-width: 100%;
+}
+.game_container
+{
+    max-width: 100%;
+    max-height: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(2rem, 7rem));
+    grid-template-rows: repeat(4, minmax(2rem, 7rem));
+}
+.card-container
+{
+    position: relative;
+    border: 3px solid;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+}
+.card-before, .card-after
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    backface-visibility: hidden;
+}
+.card-before 
+{
+    background-color: brown;
+}
+.card-after
+{
+    background-color: white;
+    transform: rotateY(180deg);
+}
+.hide
+{
+    display: none;
+}
+.statistics
+{
+    width: 30%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.control_container
+{
+    position: absolute;
+    background-color: chartreuse;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button 
+{
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+}
+.control_container button 
+{
+    width: 10rem;
+    height: 5rem;
+    font-size: 2rem;
+}
+main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#stop
+{
+    margin-top: 0.3rem;
+    padding: 0.25rem;
+}
+.active 
+{
+    transform: rotateY(0deg);
+}
+img
+{
+    max-width: 5rem;
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px)
+{
+    main
+    {
+        width: 50vw;
+        height: 80vh;
+    }
+    .statistics
+    {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+    main
+    {
+        width: 63vw;
+        height: 80vh;
+        padding: 0;
+    }
+    .game_container
+    {
+        grid-template-columns: repeat(4, 6.5rem);
+        grid-template-rows: repeat(4, 6.5rem);
+    }
+    .statistics
+    {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 425px) and (max-width: 768px)
+{
+    main
+    {
+        width: 90vw;
+        height: 70vh;
+        box-shadow: none;
+        padding: 0;
+    }
+    .game_container
+    {
+        grid-template-columns: repeat(4, 5rem);
+        grid-template-rows: repeat(4, 5rem);
+    }
+    #stop
+    {
+        margin-top: 0.1rem;
+    }
+    .statistics
+    {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 425px)
+{
+    main
+    {
+        width: 90vw;
+        height: 60vh;
+        box-shadow: none;
+        padding: 0;
+    }
+    .game_container
+    {
+        grid-template-columns: repeat(4, 3.5rem);
+        grid-template-rows: repeat(4, 3.5rem);
+    }
+    #stop
+    {
+        margin-top: 0.1rem;
+    }
+    .statistics
+    {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 320px)
+{
+    main
+    {
+        width: 90vw;
+        height: 60vh;
+        box-shadow: none;
+        padding: 0;
+    }
+    .game_container
+    {
+        grid-template-columns: repeat(4, 2.5rem);
+        grid-template-rows: repeat(4, 2.5rem);
+    }
+    #stop
+    {
+        margin-top: 0.1rem;
+    }
+    .statistics
+    {
+        width: 80%;
+    }
+}
